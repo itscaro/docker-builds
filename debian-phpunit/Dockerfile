@@ -23,7 +23,7 @@ RUN echo "deb http://packages.dotdeb.org wheezy all" >> /etc/apt/sources.list.d/
 	wget -O- http://www.dotdeb.org/dotdeb.gpg | apt-key add -; apt-get update
 	
 # Install PHP 5
-RUN apt-get install -y php5-cli php5 php5-mcrypt php5-curl php5-pgsql php5-mysql php5-gd php5-memcached
+RUN apt-get install -y php5-cli php5 php5-mcrypt php5-curl php5-pgsql php5-mysql php5-gd php5-memcached php5-memcache
 
 # Let's set the default timezone in both cli and apache configs
 RUN sed -i 's/\;date\.timezone\ \=/date\.timezone\ \=\ Europe\/Paris/g' /etc/php5/*/php.ini
