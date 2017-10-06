@@ -8,10 +8,6 @@ RUN \
   pip install -r requirements.txt && \
   rm requirements.txt
 
-RUN \
-  python setup.py install && \
-  rm -rf /tmp/*
-
 WORKDIR /docs
 
 EXPOSE 8000
